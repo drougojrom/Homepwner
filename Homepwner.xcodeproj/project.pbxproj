@@ -13,6 +13,7 @@
 		3064777A1C97D948003946DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306477781C97D948003946DB /* LaunchScreen.storyboard */; };
 		306477821C97D9CF003946DB /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306477811C97D9CF003946DB /* ItemsViewController.swift */; };
 		306477841C97DA87003946DB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306477831C97DA87003946DB /* Item.swift */; };
+		306477861C97E33E003946DB /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306477851C97E33E003946DB /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3064777B1C97D948003946DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306477811C97D9CF003946DB /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = ../ItemsViewController.swift; sourceTree = "<group>"; };
 		306477831C97DA87003946DB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../Item.swift; sourceTree = "<group>"; };
+		306477851C97E33E003946DB /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemStore.swift; path = ../ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		3064776E1C97D948003946DB /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				306477851C97E33E003946DB /* ItemStore.swift */,
 				306477831C97DA87003946DB /* Item.swift */,
 				306477811C97D9CF003946DB /* ItemsViewController.swift */,
 				3064776F1C97D948003946DB /* AppDelegate.swift */,
@@ -141,6 +144,7 @@
 			files = (
 				306477821C97D9CF003946DB /* ItemsViewController.swift in Sources */,
 				306477841C97DA87003946DB /* Item.swift in Sources */,
+				306477861C97E33E003946DB /* ItemStore.swift in Sources */,
 				306477701C97D948003946DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
