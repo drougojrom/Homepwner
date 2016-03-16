@@ -84,6 +84,7 @@ class ItemsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         // if the table view is asking to commit a delete command
+        
         if editingStyle == .Delete {
             let item = itemStore.allItems[indexPath.row]
             
@@ -114,4 +115,9 @@ class ItemsViewController: UITableViewController {
         // update a model
         itemStore.moveRowAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
     }
+    
+    override func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+        return "Remove"
+    }
+    
 }
