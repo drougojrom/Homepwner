@@ -14,6 +14,18 @@ class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
     
     @IBAction func addNewItem(sender: AnyObject){
+        
+        // create a new item and add it to the store
+        let newItem = itemStore.createItem()
+        
+        // figure out where is that item in the array
+        
+        if let index = itemStore.allItems.indexOf(newItem){
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            
+            // insert this row into the table
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
     
     }
     
@@ -64,6 +76,18 @@ class ItemsViewController: UITableViewController {
         cell.textLabel?.text = "$\(item.valueInDollars)"
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        // if the table view is asking to commit a delete command
+        if editingStyle == .Delete {
+            let item = itemStore.allItems[indexPath.row]
+            // remove the item from the store
+            itemStore.removeItem(item)
+            
+            // also remove that row
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
     }
     
 }
