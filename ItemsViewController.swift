@@ -13,6 +13,29 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
+    @IBAction func addNewItem(sender: AnyObject){
+    
+    }
+    
+    @IBAction func toggleEditingMode(sender: AnyObject){
+        // if you are currently in editing mode
+        
+        if editing {
+            // change the text of a button to inform user
+            sender.setTitle("Editing", forState: .Normal)
+            
+            // turn off editing mode
+            setEditing(false, animated: true)
+        } else {
+            // change the text to inform user
+            sender.setTitle("Done", forState: .Normal)
+            
+            // enter editing mode
+            setEditing(true, animated: true)
+        }
+        
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemStore.allItems.count
     }
