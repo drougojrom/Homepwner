@@ -90,4 +90,8 @@ class ItemsViewController: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        // update a model
+        itemStore.moveRowAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+    }
 }

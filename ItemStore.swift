@@ -25,4 +25,19 @@ class ItemStore {
         }
     }
     
+    func moveRowAtIndex(fromIndex:Int , toIndex: Int){
+        if fromIndex == toIndex {
+            return
+        }
+        
+        // get reference to object being moved so you can reinsert it
+        let movedItem = allItems[fromIndex]
+        
+        // remove item from the array
+        allItems.removeAtIndex(fromIndex)
+        
+        // insert an item in array on new location
+        allItems.insert(movedItem, atIndex: toIndex)
+    }
+    
 }
