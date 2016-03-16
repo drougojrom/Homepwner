@@ -73,7 +73,11 @@ class ItemsViewController: UITableViewController {
         // will appear at the table view
         
         let item = itemStore.allItems[indexPath.row]
-        cell.textLabel?.text = "$\(item.valueInDollars)"
+        
+        let valueInDollarsText = "$\(item.valueInDollars)"
+        
+        cell.textLabel?.text = item.name
+        cell.detailTextLabel?.text = valueInDollarsText
         
         return cell
     }
