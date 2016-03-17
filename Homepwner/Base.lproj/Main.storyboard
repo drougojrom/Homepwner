@@ -71,6 +71,7 @@
                                     <constraints>
                                         <constraint firstItem="5RU-g2-i5z" firstAttribute="top" secondItem="pNn-ah-brP" secondAttribute="topMargin" id="2ET-gI-NK6"/>
                                         <constraint firstItem="5RU-g2-i5z" firstAttribute="leading" secondItem="pNn-ah-brP" secondAttribute="leadingMargin" id="4eL-u3-XfI"/>
+                                        <constraint firstItem="jqO-HY-6PA" firstAttribute="top" secondItem="5RU-g2-i5z" secondAttribute="bottom" constant="5.5" id="CTJ-kh-gVc"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="jqO-HY-6PA" secondAttribute="bottom" constant="5.5" id="D9K-GR-4bd"/>
                                         <constraint firstItem="Bsc-Tb-vpZ" firstAttribute="centerY" secondItem="pNn-ah-brP" secondAttribute="centerY" id="Q16-Pw-ZCR"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Bsc-Tb-vpZ" secondAttribute="trailing" id="uOm-t9-c7C"/>
