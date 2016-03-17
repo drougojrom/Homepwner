@@ -49,7 +49,7 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemStore.allItems.count + 1
+        return itemStore.allItems.count //+ 1
     }
     
     override func viewDidLoad() {
@@ -61,20 +61,22 @@ class ItemsViewController: UITableViewController {
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
+        
+        tableView.rowHeight = 65
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.row ==  itemStore.allItems.count {
-            let tc = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
-            tc.selectionStyle = UITableViewCellSelectionStyle(rawValue: 0)!
-            tc.textLabel?.text = "No more items!"
-            tc.detailTextLabel?.text = ""
-            return tc
-        }
+//        if indexPath.row ==  itemStore.allItems.count {
+//            let tc = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath)
+//            tc.selectionStyle = UITableViewCellSelectionStyle(rawValue: 0)!
+//            tc.textLabel?.text = "No more items!"
+//            tc.detailTextLabel?.text = ""
+//            return tc
+//        }
         
         // create a new recycle cell
-        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
         
         // set the text on the cell with the description of the item
         // that is at the nth index of items, where n = row this cell
@@ -82,10 +84,10 @@ class ItemsViewController: UITableViewController {
         
         let item = itemStore.allItems[indexPath.row]
         
-        let valueInDollarsText = "$\(item.valueInDollars)"
-        
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = valueInDollarsText
+        // configure the cell with the item
+        cell.nameLabel?.text = item.name
+        cell.serialNumberLabel?.text = item.serialNumber
+        cell.valueLabel?.text = "$\(item.valueInDollars)"
         
         return cell
     }
@@ -128,12 +130,12 @@ class ItemsViewController: UITableViewController {
         return "Remove"
     }
     
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        if indexPath.row == itemStore.allItems.count {
-            return false
-        } else {
-            return true
-        }
-    }
+//    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        if indexPath.row == itemStore.allItems.count {
+//            return false
+//        } else {
+//            return true
+//        }
+//    }
     
 }
