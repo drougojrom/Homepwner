@@ -15,5 +15,13 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var serialNumberLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     
+    func updateLabels(){
+        let bodyFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        nameLabel.font = bodyFont
+        valueLabel.font = bodyFont
+        
+        let caption1Font = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption1)
+        serialNumberLabel.font = caption1Font
+    }
     
 }

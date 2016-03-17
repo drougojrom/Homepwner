@@ -79,6 +79,9 @@ class ItemsViewController: UITableViewController {
         // create a new recycle cell
         let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
         
+        // update the label for the new preferred text style
+        cell.updateLabels()
+        
         // set the text on the cell with the description of the item
         // that is at the nth index of items, where n = row this cell
         // will appear at the table view
