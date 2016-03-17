@@ -49,7 +49,7 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemStore.allItems.count
+        return itemStore.allItems.count + 1
     }
     
     override func viewDidLoad() {
@@ -64,6 +64,14 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        if indexPath.row ==  itemStore.allItems.count {
+            let tc = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
+            tc.selectionStyle = UITableViewCellSelectionStyle(rawValue: 0)!
+            tc.textLabel?.text = "No more items!"
+            tc.detailTextLabel?.text = ""
+            return tc
+        }
         
         // create a new recycle cell
         let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
@@ -118,6 +126,14 @@ class ItemsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
         return "Remove"
+    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if indexPath.row == itemStore.allItems.count {
+            return false
+        } else {
+            return true
+        }
     }
     
 }
