@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="-11" y="200"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="HPs-kK-Zdv">
             <objects>
-                <viewController id="sbC-pP-gL3" sceneMemberID="viewController">
+                <viewController id="sbC-pP-gL3" customClass="DetailViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a2b-IM-eqF"/>
                         <viewControllerLayoutGuide type="bottom" id="sff-xj-yve"/>
@@ -180,6 +180,12 @@
                             <constraint firstItem="sff-xj-yve" firstAttribute="top" secondItem="KSt-6h-y4N" secondAttribute="bottom" constant="8" id="u8e-Io-nza"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="gdQ-Li-YbG" id="ERN-as-2KJ"/>
+                        <outlet property="nameField" destination="vFT-1q-ph3" id="C8a-oa-rP9"/>
+                        <outlet property="serialNumberField" destination="WvI-oZ-ZVq" id="MLj-Xe-ahF"/>
+                        <outlet property="valueField" destination="dya-Oz-1h0" id="YEp-cv-cdN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBZ-tl-2d3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
