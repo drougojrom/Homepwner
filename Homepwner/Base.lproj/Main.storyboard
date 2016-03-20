@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Items View Controller-->
+        <!--Homepwner-->
         <scene sceneID="7xq-KK-F3O">
             <objects>
                 <tableViewController id="K4A-rC-uzR" customClass="ItemsViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
@@ -14,36 +14,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="ed3-ZG-TOS">
-                            <rect key="frame" x="0.0" y="64" width="600" height="75"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFe-0u-Fxl">
-                                    <rect key="frame" x="16" y="23" width="40" height="30"/>
-                                    <state key="normal" title="Edit"/>
-                                    <connections>
-                                        <action selector="toggleEditingMode:" destination="K4A-rC-uzR" eventType="touchUpInside" id="Hfd-dB-lcj"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjW-pA-Rpc">
-                                    <rect key="frame" x="552" y="23" width="40" height="30"/>
-                                    <state key="normal" title="Add"/>
-                                    <connections>
-                                        <action selector="addNewItem:" destination="K4A-rC-uzR" eventType="touchUpInside" id="kcG-6F-61y"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="lFe-0u-Fxl" firstAttribute="leading" secondItem="ed3-ZG-TOS" secondAttribute="leading" constant="8" id="ANH-rk-XbT"/>
-                                <constraint firstAttribute="trailing" secondItem="BjW-pA-Rpc" secondAttribute="trailing" constant="8" id="Se7-js-Tt2"/>
-                                <constraint firstItem="BjW-pA-Rpc" firstAttribute="leading" secondItem="lFe-0u-Fxl" secondAttribute="trailing" constant="8" id="Ugz-9c-b9a"/>
-                                <constraint firstItem="BjW-pA-Rpc" firstAttribute="width" secondItem="lFe-0u-Fxl" secondAttribute="width" id="iEd-oZ-BiF"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="YF8-Vk-SvM" customClass="ItemCell" customModule="Homepwner" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="167" width="600" height="65"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YF8-Vk-SvM" id="pNn-ah-brP">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="64.5"/>
@@ -91,11 +64,17 @@
                             <outlet property="delegate" destination="K4A-rC-uzR" id="hlT-Og-hLl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="noZ-Dc-mMI"/>
+                    <navigationItem key="navigationItem" title="Homepwner" id="noZ-Dc-mMI">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ZH4-v6-FnS">
+                            <connections>
+                                <action selector="addNewItem:" destination="K4A-rC-uzR" id="V7t-6J-C2B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHG-r3-wIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="200"/>
+            <point key="canvasLocation" x="505" y="736"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="HPs-kK-Zdv">
@@ -208,7 +187,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1574" y="200"/>
+            <point key="canvasLocation" x="1286" y="238"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IFl-8k-PPb">
@@ -226,7 +205,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9q3-4v-JOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11" y="200"/>
+            <point key="canvasLocation" x="277" y="-46"/>
         </scene>
     </scenes>
 </document>
