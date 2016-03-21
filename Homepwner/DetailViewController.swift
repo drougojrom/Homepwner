@@ -13,7 +13,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var serialNumberField: UITextField!
     @IBOutlet weak var valueField: UITextField!
-    
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     
     var item: Item! {
@@ -71,6 +71,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         
         view.endEditing(true)
+    }
+    @IBAction func takePicture(sender: UIBarButtonItem) {
     }
     
 }

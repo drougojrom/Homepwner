@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		305DA4E81CA00AC20073A869 /* BorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305DA4E71CA00AC20073A869 /* BorderStyle.swift */; };
 		3063BEA41C9AB3B6006C2C1F /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063BEA31C9AB3B6006C2C1F /* ItemCell.swift */; };
 		306477701C97D948003946DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064776F1C97D948003946DB /* AppDelegate.swift */; };
 		306477751C97D948003946DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306477731C97D948003946DB /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		305DA4E71CA00AC20073A869 /* BorderStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderStyle.swift; path = ../BorderStyle.swift; sourceTree = "<group>"; };
 		3063BEA31C9AB3B6006C2C1F /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		3064776C1C97D948003946DB /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3064776F1C97D948003946DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		3064776E1C97D948003946DB /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				305DA4E71CA00AC20073A869 /* BorderStyle.swift */,
 				306477851C97E33E003946DB /* ItemStore.swift */,
 				306477831C97DA87003946DB /* Item.swift */,
 				306477811C97D9CF003946DB /* ItemsViewController.swift */,
@@ -152,6 +155,7 @@
 				306477841C97DA87003946DB /* Item.swift in Sources */,
 				306477861C97E33E003946DB /* ItemStore.swift in Sources */,
 				307354271C9DEDA90078D9C6 /* DetailViewController.swift in Sources */,
+				305DA4E81CA00AC20073A869 /* BorderStyle.swift in Sources */,
 				306477701C97D948003946DB /* AppDelegate.swift in Sources */,
 				3063BEA41C9AB3B6006C2C1F /* ItemCell.swift in Sources */,
 			);
