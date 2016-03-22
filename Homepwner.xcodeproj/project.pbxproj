@@ -17,6 +17,7 @@
 		306477841C97DA87003946DB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306477831C97DA87003946DB /* Item.swift */; };
 		306477861C97E33E003946DB /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306477851C97E33E003946DB /* ItemStore.swift */; };
 		307354271C9DEDA90078D9C6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307354261C9DEDA90078D9C6 /* DetailViewController.swift */; };
+		30BDCCAE1CA142CD00F0BA4E /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BDCCAD1CA142CD00F0BA4E /* ImageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		306477831C97DA87003946DB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../Item.swift; sourceTree = "<group>"; };
 		306477851C97E33E003946DB /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemStore.swift; path = ../ItemStore.swift; sourceTree = "<group>"; };
 		307354261C9DEDA90078D9C6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		30BDCCAD1CA142CD00F0BA4E /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				3064776F1C97D948003946DB /* AppDelegate.swift */,
 				306477731C97D948003946DB /* Main.storyboard */,
 				307354261C9DEDA90078D9C6 /* DetailViewController.swift */,
+				30BDCCAD1CA142CD00F0BA4E /* ImageStore.swift */,
 				306477761C97D948003946DB /* Assets.xcassets */,
 				306477781C97D948003946DB /* LaunchScreen.storyboard */,
 				3064777B1C97D948003946DB /* Info.plist */,
@@ -154,6 +157,7 @@
 				306477821C97D9CF003946DB /* ItemsViewController.swift in Sources */,
 				306477841C97DA87003946DB /* Item.swift in Sources */,
 				306477861C97E33E003946DB /* ItemStore.swift in Sources */,
+				30BDCCAE1CA142CD00F0BA4E /* ImageStore.swift in Sources */,
 				307354271C9DEDA90078D9C6 /* DetailViewController.swift in Sources */,
 				305DA4E81CA00AC20073A869 /* BorderStyle.swift in Sources */,
 				306477701C97D948003946DB /* AppDelegate.swift in Sources */,
