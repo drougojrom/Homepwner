@@ -90,7 +90,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         } else {
             imagePicker.sourceType = .PhotoLibrary
         }
-        
+        imagePicker.allowsEditing = true
         imagePicker.delegate = self
         
         // place imagePicker on the screen
@@ -99,7 +99,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         // get picked image from into dictionary
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
+        
         
         // store the image in the imageStore for the item's key
         imageStore.setImage(image, forKey: item.itemKey)
@@ -112,6 +113,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         
         dismissViewControllerAnimated(true, completion: nil)
         
+    }
+    @IBAction func deleteImage(sender: UIBarButtonItem) {
+        imageView.image = nil
     }
     
 }
