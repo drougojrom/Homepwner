@@ -95,6 +95,9 @@ class ItemsViewController: UITableViewController {
                 (action) -> Void in
                 // remove the item from the store
                 self.itemStore.removeItem(item)
+                // remove the item's image from the image store
+                self.imageStore.deleteImageForKey(item.itemKey)
+                
                 // also remove that row
                 self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             
