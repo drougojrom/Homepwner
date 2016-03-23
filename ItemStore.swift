@@ -12,6 +12,13 @@ class ItemStore {
     
     var allItems = [Item]()
     
+    // URL for reading and writing files
+    let itemsArchiveURL : NSURL = {
+        let documentsDirectories = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        let documentDerictory = documentsDirectories.first!
+        return documentDerictory.URLByAppendingPathComponent("items.archive")
+    }()
+    
     func createItem() -> Item {
         let newItem = Item(random: true)
         allItems.append(newItem)
