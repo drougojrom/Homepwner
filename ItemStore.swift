@@ -53,4 +53,10 @@ class ItemStore {
         return NSKeyedArchiver.archiveRootObject(allItems, toFile: itemsArchiveURL.path!)
     }
     
+    init(){
+        if let archivedItems = NSKeyedUnarchiver.unarchiveObjectWithFile(itemsArchiveURL.path!) as? [Item] {
+            allItems += archivedItems
+        }
+    }
+    
 }
