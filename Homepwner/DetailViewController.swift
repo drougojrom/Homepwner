@@ -83,6 +83,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBAction func takePicture(sender: UIBarButtonItem) {
         
         let imagePicker = UIImagePickerController()
+        
+        // add crossHair
+        let imageCrossHair = UIImage(named: "crossHair.png")
+        let crossHairImageView = UIImageView(image: imageCrossHair)
+        crossHairImageView.frame = CGRectMake(0, 0, 50, 50)
+        let tempView = imagePicker.view
+        crossHairImageView.center = tempView.center
+        tempView.addSubview(crossHairImageView)
+        
         // if your device has a camera, use it
         // otherwise just pick an image from library
         if UIImagePickerController.isSourceTypeAvailable(.Camera){
