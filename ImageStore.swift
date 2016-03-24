@@ -24,4 +24,11 @@ class ImageStore {
         cache.removeObjectForKey(key)
     }
     
+    func imageURLForKey(key: String)-> NSURL {
+        let documentDirectories = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        let documentDirectory = documentDirectories.first!
+        
+        return documentDirectory.URLByAppendingPathComponent(key)
+    }
+    
 }
