@@ -14,14 +14,37 @@ class ImageStore {
     
     func setImage(image: UIImage, forKey key: String) {
         cache.setObject(image, forKey: key)
+        
+        // create full url for image
+        let imageURL = imageURLForKey(key)
+        
+        // turn image into JPEG data
+        if let data = UIImageJPEGRepresentation(image, 0.5) {
+            // write it to full URL
+            data.writeToURL(imageURL, atomically: true)
+        }
+        
     }
     
     func imageForKey(key: String) -> UIImage? {
-        return cache.objectForKey(key) as? UIImage
+        if let existingImage = cache.objectForKey(key) as? UIImage {
+            return existingImage
+        }
+        
+        let imageURL = imageURLForKey(key)
+        guard let imageFromDisk = UIImage(contentsOfFile: imageURL.path!) else {
+            return nil
+        }
+        
+        cache.setObject(imageFromDisk, forKey: key)
+        return imageFromDisk
     }
     
     func deleteImageForKey(key: String) {
         cache.removeObjectForKey(key)
+        
+        let imageURL = imageURLForKey(key)
+        NSFileManager.defaultManager().removeItemAtURL(imageURL)
     }
     
     func imageURLForKey(key: String)-> NSURL {
